@@ -9,6 +9,16 @@
 .arena::after{content:"";position:absolute;inset:24px 70px;border-radius:50%;background:radial-gradient(ellipse,#f6cb6130 0,#f6cb6100 70%);filter:blur(7px)}
 .coin-edge{position:absolute;inset:2px;border-radius:50%;transform:translateZ(-5px);background:repeating-linear-gradient(90deg,#6d421d 0 3px,#e2b95e 3px 5px);box-shadow:0 0 0 7px #8b5b26}
 .coin-face{box-shadow:inset 0 0 0 4px #d4a54a,inset 12px 13px 22px #fff7,inset -14px -12px 25px #532f13,0 0 0 2px #5d391b}
+.clp .coin-face{background:radial-gradient(circle at 34% 27%,#f7faf9 0 12%,#a9b3b5 48%,#d6a644 49%,#f4d06b 69%,#88511c 100%);border-color:#73501f;color:#4b5557;text-shadow:0 1px #fff8}
+.usd .coin-face{background:radial-gradient(circle at 32% 24%,#fff 0,#c5cdd0 40%,#78868b 72%,#3d484d 100%)}
+.eur .coin-face{background:radial-gradient(circle at 34% 27%,#ffe58a 0 45%,#a5afb2 46%,#e7edef 69%,#66767b 100%)}
+.jpy .coin-face{background:radial-gradient(circle at 32% 24%,#fff 0,#c9d2d3 43%,#86969a 72%,#46565b 100%)}
+.coin-face::before{content:"";position:absolute;inset:15px;border-radius:50%;border:1px dashed currentColor;opacity:.45}
+.coin-face b,.coin-face small,.coin-face i,.coin-face .year{position:relative;z-index:2}
+.coin-picker{padding:7px;border-radius:10px;background-color:#071721;background-image:linear-gradient(30deg,#17303d 12%,transparent 12.5%,transparent 87%,#17303d 87.5%,#17303d),linear-gradient(150deg,#17303d 12%,transparent 12.5%,transparent 87%,#17303d 87.5%,#17303d);background-size:20px 35px}
+.currency{position:relative;overflow:hidden;min-height:72px;backdrop-filter:blur(5px)}
+.currency::after{content:attr(data-unit);position:absolute;right:-5px;top:-8px;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;color:#5b421b;font:bold 10px 'DM Mono';background:radial-gradient(circle at 30% 25%,#fff0a1,#c28d32 70%);box-shadow:0 4px 8px #0008;opacity:.82}
+.currency.selected{box-shadow:0 0 0 1px #f2c153,0 0 16px #eeb84e38}
 .result{top:335px}.hint{top:362px}
 @media(max-width:650px){.stage{height:370px}.coin-rig{width:158px;height:158px;top:106px}.coin-rig .coin{width:155px;height:155px}.coin-rig .coin-shadow{width:134px;left:12px;top:145px}.arena{top:176px;height:135px}.result{top:321px}.hint{top:348px}}
 @media(prefers-reduced-motion:reduce){.coin-rig,.coin,.coin-shadow{animation-duration:.01ms!important}}
