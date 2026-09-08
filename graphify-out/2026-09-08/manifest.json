@@ -1,7 +1,7 @@
 {
   "app-v2.js": {
-    "mtime": 1788898772.1537044,
-    "ast_hash": "1bfde0bcef782ab54f629c429fb032c7",
+    "mtime": 1788899171.6611364,
+    "ast_hash": "dcb9515a34331535d8eb0704e6a4447b",
     "semantic_hash": ""
   },
   "app.js": {
@@ -15,8 +15,8 @@
     "semantic_hash": ""
   },
   "index.html": {
-    "mtime": 1788898934.3646014,
-    "ast_hash": "57631a7ec198f7ee6e4afedf2a1f76dd",
+    "mtime": 1788899171.662947,
+    "ast_hash": "c16bf58bfc3e9945fd9c3a59bf3b9a79",
     "semantic_hash": ""
   },
   "assets/coins/clp500-heads.png": {

@@ -87,30 +87,41 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "app_v2_tone",
-      "community": 0,
-      "community_name": "app-v2.js",
+      "community": 3,
+      "community_name": "flip",
       "norm_label": "tone()"
+    },
+    {
+      "label": "metalClink()",
+      "file_type": "code",
+      "source_file": "app-v2.js",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "app_v2_metalclink",
+      "community": 3,
+      "community_name": "flip",
+      "norm_label": "metalclink()"
     },
     {
       "label": "render()",
       "file_type": "code",
       "source_file": "app-v2.js",
-      "source_location": "L5",
+      "source_location": "L6",
       "_origin": "ast",
       "id": "app_v2_render",
-      "community": 0,
-      "community_name": "app-v2.js",
+      "community": 3,
+      "community_name": "flip",
       "norm_label": "render()"
     },
     {
       "label": "flip()",
       "file_type": "code",
       "source_file": "app-v2.js",
-      "source_location": "L6",
+      "source_location": "L7",
       "_origin": "ast",
       "id": "app_v2_flip",
-      "community": 0,
-      "community_name": "app-v2.js",
+      "community": 3,
+      "community_name": "flip",
       "norm_label": "flip()"
     },
     {
@@ -251,7 +262,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "app-v2.js",
-      "source_location": "L6",
+      "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_v2",
@@ -274,6 +285,17 @@
       "confidence": "EXTRACTED",
       "source_file": "app-v2.js",
       "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "app_v2",
+      "target": "app_v2_metalclink",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app-v2.js",
+      "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_v2",
@@ -340,7 +362,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "app-v2.js",
-      "source_location": "L23",
+      "source_location": "L24",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_v2_flip",
@@ -353,6 +375,18 @@
       "confidence": "EXTRACTED",
       "source_file": "app-v2.js",
       "source_location": "L24",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "app_v2_flip",
+      "target": "app_v2_metalclink",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app-v2.js",
+      "source_location": "L25",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_v2_flip",
@@ -484,5 +518,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "b86102f7def841928cbc9107530d94992d03bac1"
+  "built_at_commit": "f9dba5f678b9c1ccd6c69454d3fd021a01b50c2d"
 }
