@@ -55,11 +55,15 @@
     <section class="panel-grid">
       <article class="panel currency-panel">
         <div class="panel-top"><div><span class="label">MONEDA</span><h2 id="currencyName">$500 chileno</h2></div><span id="currencyFlag" class="flag">🇨🇱</span></div>
+        <div class="coin-picker" id="coinPicker" aria-label="Seleccionar moneda chilena">
+          <button class="currency" data-currency="clp100" data-name="$100 chileno" data-unit="$100" data-mass="7.58" data-diameter="23.5" data-thickness="1.70" data-heads="assets/coins/clp100-heads.png" data-tails="assets/coins/clp100-tails.jpg"><span>🇨🇱</span><small>$100</small></button>
+          <button class="currency selected" data-currency="clp500" data-name="$500 chileno" data-unit="$500" data-mass="6.5" data-diameter="26" data-thickness="1.55" data-heads="assets/coins/clp500-heads.png" data-tails="assets/coins/clp500-tails.jpg"><span>🇨🇱</span><small>$500</small></button>
+        </div>
         <div class="coin-specs" aria-label="Características físicas">
-          <span><b>26 mm</b> diámetro</span>
-          <span><b>6,5 g</b> peso</span>
-          <span><b>1,55 mm</b> espesor</span>
-          <span><b>Estriado</b> canto</span>
+          <span><b id="specDiameter">26 mm</b> diámetro</span>
+          <span><b id="specMass">6,5 g</b> peso</span>
+          <span><b id="specThickness">1,55 mm</b> espesor</span>
+          <span><b id="specEdge">Estriado</b> canto</span>
         </div>
       </article>
       <article class="panel stats-panel">
