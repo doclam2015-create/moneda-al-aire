@@ -14,7 +14,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="physics.css" />
+  <link rel="stylesheet" href="physics.css?v=5" />
+  <link rel="stylesheet" href="polish.css?v=5" />
 </head>
 <body>
   <main class="app-shell">
@@ -34,7 +35,7 @@
       <div class="arena" aria-hidden="true"><span class="arena-rim"></span><span class="arena-mark">MONEDA AL AIRE</span></div>
       <div class="coin-rig" id="coinRig" style="--coin-size:186px;--edge-depth:5.6px">
         <div class="coin-shadow"></div>
-        <button id="coin" class="coin clp500" data-mass="6.5" data-thickness="1.55" aria-label="Lanzar moneda chilena de 500 pesos">
+        <button id="coin" class="coin clp500" data-mass="6.5" data-thickness="1.55" data-heads="assets/coins/clp500-heads.png" data-tails="assets/coins/clp500-tails.jpg" aria-label="Lanzar moneda chilena de 500 pesos">
           <span class="coin-edge"></span>
           <span class="coin-face heads"><img src="assets/coins/clp500-heads.png" alt="Anverso de moneda chilena de 500 pesos: cardenal Raúl Silva Henríquez" /></span>
           <span class="coin-face tails"><img src="assets/coins/clp500-tails.jpg" alt="Reverso de moneda chilena de 500 pesos" /></span>
@@ -75,6 +76,6 @@
     </section>
     <p class="footnote">Cada lanzamiento usa aleatoriedad criptográfica de tu dispositivo.</p>
   </main>
-  <script src="app-v2.js"></script>
+  <script src="app-v2.js?v=5"></script>
 </body>
 </html>
