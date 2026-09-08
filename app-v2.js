@@ -12,13 +12,13 @@ function flip(power=1,gestureX=0){
  const rigAnim=rig.animate([{transform:'translate3d(0,0,0) rotateZ(0)',offset:0},{transform:`translate3d(${drift*.35}px,-${height}px,55px) rotateZ(${tilt}deg)`,offset:.40},{transform:`translate3d(${drift}px,-10px,4px) rotateZ(${tilt*.4}deg)`,offset:.78},{transform:`translate3d(${drift*.82}px,-34px,10px) rotateZ(${-tilt*.2}deg)`,offset:.86},{transform:`translate3d(${drift*.7}px,-2px,2px) rotateZ(${tilt*.12}deg)`,offset:.94},{transform:`translate3d(${drift*.68}px,0,0) rotateZ(0)`,offset:1}],{duration,easing:'cubic-bezier(.18,.58,.22,1)',fill:'forwards'});
  const edgeSpin=turns*360;
  const coinAnim=coin.animate([
-  {transform:'rotateX(0deg) rotateY(0deg) rotateZ(0deg)',offset:0},
-  {transform:`rotateX(80deg) rotateY(${tilt*.2}deg) rotateZ(${edgeSpin*.08}deg)`,offset:.07},
-  {transform:`rotateX(87deg) rotateY(${tilt*.38}deg) rotateZ(${edgeSpin*.34}deg)`,offset:.31},
-  {transform:`rotateX(83deg) rotateY(${-tilt*.32}deg) rotateZ(${edgeSpin*.76}deg)`,offset:.70},
-  {transform:`rotateX(89deg) rotateY(${tilt*.18}deg) rotateZ(${edgeSpin*.88}deg)`,offset:.82},
-  {transform:`rotateX(78deg) rotateY(${-tilt*.16}deg) rotateZ(${edgeSpin*.94}deg)`,offset:.91},
-  {transform:`rotateX(88deg) rotateY(0deg) rotateZ(${edgeSpin}deg)`,offset:1}
+  {transform:'rotateZ(0deg) scale(1)',offset:0},
+  {transform:`rotateZ(${edgeSpin*.08}deg) scale(.98)`,offset:.07},
+  {transform:`rotateZ(${edgeSpin*.34}deg) scale(.94)`,offset:.31},
+  {transform:`rotateZ(${edgeSpin*.76}deg) scale(.97)`,offset:.70},
+  {transform:`rotateZ(${edgeSpin*.88}deg) scale(1)`,offset:.82},
+  {transform:`rotateZ(${edgeSpin*.94}deg) scale(.98)`,offset:.91},
+  {transform:`rotateZ(${edgeSpin}deg) scale(1)`,offset:1}
  ],{duration,easing:'cubic-bezier(.2,.65,.25,1)',fill:'forwards'});
  shadow.animate([{transform:'scale(1)',opacity:.66},{transform:'scale(.32)',opacity:.14,offset:.31},{transform:'scale(.92)',opacity:.58,offset:.76},{transform:'scale(.72)',opacity:.35,offset:.84},{transform:'scale(1)',opacity:.7}],{duration,easing:'cubic-bezier(.16,.72,.2,1)'});
  tone(520,.07,.025);setTimeout(()=>metalClink(.075),duration*.76);setTimeout(()=>metalClink(.05),duration*.84);setTimeout(()=>metalClink(.032),duration*.93);
@@ -31,4 +31,4 @@ flipBtn.onclick=()=>flip(1.1,0);
 document.querySelectorAll('.choice').forEach(b=>b.onclick=()=>{document.querySelector('.choice.active').classList.remove('active');b.classList.add('active');choice=b.dataset.choice;result.textContent=`Elegiste ${choice.toLowerCase()}`});
 $('#soundBtn').onclick=()=>{sound=!sound;$('#soundBtn').textContent=sound?'♬':'♩̸'};
 $('#resetBtn').onclick=()=>{Object.assign(stats,{total:0,heads:0,tails:0,history:[]});render();result.textContent='Estadísticas reiniciadas'};
-document.querySelectorAll('.currency').forEach(b=>b.onclick=()=>{document.querySelector('.currency.selected').classList.remove('selected');b.classList.add('selected');const d=b.dataset;coin.className=`coin ${d.currency}`;coin.dataset.mass=d.mass;coin.dataset.thickness=d.thickness;coin.dataset.heads=d.heads;coin.dataset.tails=d.tails;delete coin.dataset.side;coin.style.transform='rotateY(0deg)';const size=Math.round(128+(Number(d.diameter)-15.5)*5.5);rig.style.setProperty('--coin-size',`${Math.min(186,size)}px`);rig.style.setProperty('--edge-depth',`${Math.max(9,Math.min(13,Number(d.thickness)*6.5))}px`);coin.innerHTML=`<span class="coin-edge"></span><span class="coin-face heads"><img src="${d.heads}" alt="Cara de ${d.name}"></span><span class="coin-face tails"><img src="${d.tails}" alt="Sello de ${d.name}"></span>`;$('#currencyName').textContent=d.name;$('#specDiameter').textContent=`${String(d.diameter).replace('.',',')} mm`;$('#specMass').textContent=`${String(d.mass).replace('.',',')} g`;$('#specThickness').textContent=`${String(d.thickness).replace('.',',')} mm`;$('#specEdge').textContent=d.currency==='clp100'?'Liso/estriado':'Estriado';result.textContent=`Moneda: ${d.name}`});
+document.querySelectorAll('.currency').forEach(b=>b.onclick=()=>{document.querySelector('.currency.selected').classList.remove('selected');b.classList.add('selected');const d=b.dataset;coin.className=`coin ${d.currency}`;coin.dataset.mass=d.mass;coin.dataset.thickness=d.thickness;coin.dataset.heads=d.heads;coin.dataset.tails=d.tails;delete coin.dataset.side;coin.style.transform='rotateY(0deg)';const size=Math.round(128+(Number(d.diameter)-15.5)*5.5);rig.style.setProperty('--coin-size',`${Math.min(186,size)}px`);rig.style.setProperty('--edge-depth',`${Math.max(15,Math.min(18,Number(d.thickness)*10))}px`);coin.innerHTML=`<span class="coin-edge"></span><span class="coin-face heads"><img src="${d.heads}" alt="Cara de ${d.name}"></span><span class="coin-face tails"><img src="${d.tails}" alt="Sello de ${d.name}"></span>`;$('#currencyName').textContent=d.name;$('#specDiameter').textContent=`${String(d.diameter).replace('.',',')} mm`;$('#specMass').textContent=`${String(d.mass).replace('.',',')} g`;$('#specThickness').textContent=`${String(d.thickness).replace('.',',')} mm`;$('#specEdge').textContent=d.currency==='clp100'?'Liso/estriado':'Estriado';result.textContent=`Moneda: ${d.name}`});
