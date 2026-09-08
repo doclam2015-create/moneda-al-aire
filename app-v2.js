@@ -9,7 +9,16 @@ function flip(power=1,gestureX=0){
  const mass=Number(coin.dataset.mass||7.58),massFactor=Math.max(.7,Math.min(1.25,7.58/mass)),random=crypto.getRandomValues(new Uint32Array(4)),isHeads=random[0]%2===0,drift=Math.max(-55,Math.min(55,(random[1]%61)-30+gestureX*.12)),tilt=(random[2]%35)-17,turns=7+(random[3]%4)+Math.round(power*2*massFactor),endY=turns*360+(isHeads?0:180),height=245+Math.min(125,power*58*massFactor),duration=2250+Math.min(550,power*190/massFactor);
  coin.style.transform='rotateX(0) rotateY(0) rotateZ(0)';
  const rigAnim=rig.animate([{transform:'translate3d(0,0,0) rotateZ(0)',offset:0},{transform:`translate3d(${drift*.35}px,-${height}px,55px) rotateZ(${tilt}deg)`,offset:.31},{transform:`translate3d(${drift}px,-10px,4px) rotateZ(${tilt*.4}deg)`,offset:.76},{transform:`translate3d(${drift*.82}px,-34px,10px) rotateZ(${-tilt*.2}deg)`,offset:.84},{transform:`translate3d(${drift*.7}px,-2px,2px) rotateZ(${tilt*.12}deg)`,offset:.93},{transform:`translate3d(${drift*.68}px,0,0) rotateZ(0)`,offset:1}],{duration,easing:'cubic-bezier(.16,.72,.2,1)',fill:'forwards'});
- const coinAnim=coin.animate([{transform:'rotateX(0) rotateY(0) rotateZ(0)'},{transform:`rotateX(${turns*95}deg) rotateY(${endY*.58}deg) rotateZ(${tilt*5}deg)`,offset:.55},{transform:`rotateX(${turns*150}deg) rotateY(${endY}deg) rotateZ(${tilt}deg)`,offset:.76},{transform:`rotateX(${turns*153}deg) rotateY(${endY+22}deg) rotateZ(${-tilt*.35}deg)`,offset:.84},{transform:`rotateX(${turns*154}deg) rotateY(${endY}deg) rotateZ(${tilt*.12}deg)`,offset:1}],{duration,easing:'cubic-bezier(.2,.65,.25,1)',fill:'forwards'});
+ const edgeSpin=turns*360;
+ const coinAnim=coin.animate([
+  {transform:'rotateX(0deg) rotateY(0deg) rotateZ(0deg)',offset:0},
+  {transform:`rotateX(80deg) rotateY(${tilt*.2}deg) rotateZ(${edgeSpin*.08}deg)`,offset:.07},
+  {transform:`rotateX(87deg) rotateY(${tilt*.38}deg) rotateZ(${edgeSpin*.34}deg)`,offset:.31},
+  {transform:`rotateX(83deg) rotateY(${-tilt*.32}deg) rotateZ(${edgeSpin*.76}deg)`,offset:.70},
+  {transform:`rotateX(89deg) rotateY(${tilt*.18}deg) rotateZ(${edgeSpin*.88}deg)`,offset:.82},
+  {transform:`rotateX(78deg) rotateY(${-tilt*.16}deg) rotateZ(${edgeSpin*.94}deg)`,offset:.91},
+  {transform:`rotateX(88deg) rotateY(0deg) rotateZ(${edgeSpin}deg)`,offset:1}
+ ],{duration,easing:'cubic-bezier(.2,.65,.25,1)',fill:'forwards'});
  shadow.animate([{transform:'scale(1)',opacity:.66},{transform:'scale(.32)',opacity:.14,offset:.31},{transform:'scale(.92)',opacity:.58,offset:.76},{transform:'scale(.72)',opacity:.35,offset:.84},{transform:'scale(1)',opacity:.7}],{duration,easing:'cubic-bezier(.16,.72,.2,1)'});
  tone(620,.09,.035);setTimeout(()=>tone(480,.07,.028),710);setTimeout(()=>tone(190,.08,.07),1710);setTimeout(()=>tone(150,.06,.04),1910);
  rigAnim.onfinish=()=>{const side=isHeads?'Cara':'Sello';stats.total++;stats[isHeads?'heads':'tails']++;stats.history.unshift(side);stats.history=stats.history.slice(0,12);render();result.textContent=`${side} ${side===choice?'— acertaste':'— esta vez no'}`;rigAnim.cancel();coinAnim.cancel();headsImg.src=isHeads?coin.dataset.heads:coin.dataset.tails;headsImg.alt=`${side} de la moneda seleccionada`;coin.dataset.side='heads';rig.style.transform=`translate3d(${drift*.68}px,0,0)`;coin.style.transform='rotateY(0deg)';tone(isHeads?740:420,.14,.06);flipping=false};
