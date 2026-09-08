@@ -4,7 +4,9 @@
 .arena-mark{position:absolute;width:100%;text-align:center;top:94px;color:#66808a;font:500 9px 'DM Mono';letter-spacing:3px}
 .coin-rig{z-index:2;position:absolute;top:111px;width:180px;height:180px;transform-style:preserve-3d;will-change:transform}
 .coin-rig .coin-shadow{width:152px;height:24px;left:14px;top:161px;opacity:.66;will-change:transform,opacity}
-.coin-rig .coin{position:absolute;inset:0;margin:auto;will-change:transform}
+.coin-rig .coin{position:absolute;inset:0;margin:auto;will-change:transform;touch-action:none;user-select:none;-webkit-user-select:none}
+.coin-rig .coin::after{content:"";position:absolute;inset:8px;border-radius:50%;z-index:5;pointer-events:none;background:linear-gradient(125deg,#fff9 0%,#fff0 24%,#fff0 68%,#0005 100%);mix-blend-mode:soft-light}
+.arena::after{content:"";position:absolute;inset:24px 70px;border-radius:50%;background:radial-gradient(ellipse,#f6cb6130 0,#f6cb6100 70%);filter:blur(7px)}
 .coin-edge{position:absolute;inset:2px;border-radius:50%;transform:translateZ(-5px);background:repeating-linear-gradient(90deg,#6d421d 0 3px,#e2b95e 3px 5px);box-shadow:0 0 0 7px #8b5b26}
 .coin-face{box-shadow:inset 0 0 0 4px #d4a54a,inset 12px 13px 22px #fff7,inset -14px -12px 25px #532f13,0 0 0 2px #5d391b}
 .result{top:335px}.hint{top:362px}
