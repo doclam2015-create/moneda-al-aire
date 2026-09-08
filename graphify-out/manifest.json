@@ -1,0 +1,57 @@
+{
+  "app-v2.js": {
+    "mtime": 1788885830.3322587,
+    "ast_hash": "caddd76c72fb8dbdaab063f7d6580811",
+    "semantic_hash": ""
+  },
+  "app.js": {
+    "mtime": 1788878862.3665862,
+    "ast_hash": "bf8438e1d1ab56a20795afd235ff4f8b",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1788885830.3352704,
+    "ast_hash": "785fbe98327f94d1be8de3ab5479088d",
+    "semantic_hash": ""
+  },
+  "index.html": {
+    "mtime": 1788885830.3299234,
+    "ast_hash": "d34e031490f0cfe1588c0da2fd4c1102",
+    "semantic_hash": ""
+  },
+  "assets/coins/clp1-heads.png": {
+    "mtime": 1788885731.5362713,
+    "ast_hash": "0a17d4192a80598a09ba2398736ce29c",
+    "semantic_hash": ""
+  },
+  "assets/coins/clp1-tails.jpg": {
+    "mtime": 1788885731.5402231,
+    "ast_hash": "266b817cea7fbaa1f5a73b9bed79915e",
+    "semantic_hash": ""
+  },
+  "assets/coins/clp100-heads.png": {
+    "mtime": 1788885731.521056,
+    "ast_hash": "a5534f07233060567e0c69a49046246a",
+    "semantic_hash": ""
+  },
+  "assets/coins/clp100-tails.jpg": {
+    "mtime": 1788885731.5254974,
+    "ast_hash": "ce36173a5b5ae2ee224af019a834172e",
+    "semantic_hash": ""
+  },
+  "assets/coins/clp500-heads.png": {
+    "mtime": 1788885731.5287354,
+    "ast_hash": "745d48d87df0020a6c1903240527ea3a",
+    "semantic_hash": ""
+  },
+  "assets/coins/clp500-tails.jpg": {
+    "mtime": 1788885731.5326345,
+    "ast_hash": "58edf66848c0a7673486984ef7719328",
+    "semantic_hash": ""
+  },
+  "icon.svg": {
+    "mtime": 1788880844.5780666,
+    "ast_hash": "fa9a8ed8f2401c2bab36bcd99586b500",
+    "semantic_hash": ""
+  }
+}
