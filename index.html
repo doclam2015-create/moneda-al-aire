@@ -32,12 +32,12 @@
 
     <section class="stage" aria-live="polite">
       <div class="arena" aria-hidden="true"><span class="arena-rim"></span><span class="arena-mark">MONEDA AL AIRE</span></div>
-      <div class="coin-rig" id="coinRig">
+      <div class="coin-rig" id="coinRig" style="--coin-size:186px;--edge-depth:5.6px">
         <div class="coin-shadow"></div>
-        <button id="coin" class="coin clp" aria-label="Lanzar moneda">
+        <button id="coin" class="coin clp500" data-mass="6.5" data-thickness="1.55" aria-label="Lanzar moneda chilena de 500 pesos">
           <span class="coin-edge"></span>
-          <span class="coin-face heads"><img src="assets/coins/clp100-heads.png" alt="Anverso de moneda chilena de 100 pesos: mujer mapuche" /></span>
-          <span class="coin-face tails"><img src="assets/coins/clp100-tails.jpg" alt="Reverso de moneda chilena de 100 pesos: Escudo Nacional" /></span>
+          <span class="coin-face heads"><img src="assets/coins/clp500-heads.png" alt="Anverso de moneda chilena de 500 pesos: cardenal Raúl Silva Henríquez" /></span>
+          <span class="coin-face tails"><img src="assets/coins/clp500-tails.jpg" alt="Reverso de moneda chilena de 500 pesos" /></span>
         </button>
       </div>
       <div id="result" class="result">Toca la moneda para lanzar</div>
@@ -54,11 +54,12 @@
 
     <section class="panel-grid">
       <article class="panel currency-panel">
-        <div class="panel-top"><div><span class="label">MONEDA</span><h2 id="currencyName">Peso chileno</h2></div><span id="currencyFlag" class="flag">🇨🇱</span></div>
-        <div class="coin-picker" id="coinPicker">
-          <button class="currency" data-currency="clp1" data-name="$1 chileno · histórica" data-flag="🇨🇱" data-unit="$1" data-mass="2.20" data-diameter="15.5" data-thickness="1.36" data-heads="assets/coins/clp1-heads.png" data-tails="assets/coins/clp1-tails.jpg"><span>🇨🇱</span><small>$1</small></button>
-          <button class="currency selected" data-currency="clp" data-name="$100 chileno" data-flag="🇨🇱" data-unit="$100" data-mass="7.58" data-diameter="23.5" data-thickness="1.70" data-heads="assets/coins/clp100-heads.png" data-tails="assets/coins/clp100-tails.jpg"><span>🇨🇱</span><small>$100</small></button>
-          <button class="currency" data-currency="clp500" data-name="$500 chileno" data-flag="🇨🇱" data-unit="$500" data-mass="6.5" data-diameter="26" data-thickness="1.55" data-heads="assets/coins/clp500-heads.png" data-tails="assets/coins/clp500-tails.jpg"><span>🇨🇱</span><small>$500</small></button>
+        <div class="panel-top"><div><span class="label">MONEDA</span><h2 id="currencyName">$500 chileno</h2></div><span id="currencyFlag" class="flag">🇨🇱</span></div>
+        <div class="coin-specs" aria-label="Características físicas">
+          <span><b>26 mm</b> diámetro</span>
+          <span><b>6,5 g</b> peso</span>
+          <span><b>1,55 mm</b> espesor</span>
+          <span><b>Estriado</b> canto</span>
         </div>
       </article>
       <article class="panel stats-panel">

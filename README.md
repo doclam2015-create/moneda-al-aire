@@ -1,6 +1,6 @@
 # Moneda al Aire
 
-App web responsive para lanzar monedas chilenas de $1, $100 y $500: cara o sello, fotografías de ambas caras, escala y masa diferenciadas, animación física, sonido opcional, historial y estadísticas.
+App web responsive para lanzar una moneda chilena de $500: cara o sello, fotografías de ambas caras, masa y dimensiones reales, animación física, sonido opcional, historial y estadísticas.
 
 ## Uso
 
