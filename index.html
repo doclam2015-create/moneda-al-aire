@@ -4,11 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#071524" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="icon" href="icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="icon.svg" />
+  <link rel="manifest" href="manifest.webmanifest" />
   <title>Moneda al Aire</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="physics.css" />
 </head>
 <body>
   <main class="app-shell">
@@ -25,11 +31,15 @@
     </section>
 
     <section class="stage" aria-live="polite">
-      <div class="coin-shadow"></div>
-      <button id="coin" class="coin clp" aria-label="Lanzar moneda">
-        <span class="coin-face heads"><span class="year">CHILE · 2024</span><b>★</b><small>REPÚBLICA<br>DE CHILE</small><i>100</i></span>
-        <span class="coin-face tails"><span class="year">BANCO CENTRAL</span><b>✦</b><small>CIEN PESOS</small><i>$</i></span>
-      </button>
+      <div class="arena" aria-hidden="true"><span class="arena-rim"></span><span class="arena-mark">MONEDA AL AIRE</span></div>
+      <div class="coin-rig" id="coinRig">
+        <div class="coin-shadow"></div>
+        <button id="coin" class="coin clp" aria-label="Lanzar moneda">
+          <span class="coin-edge"></span>
+          <span class="coin-face heads"><span class="year">CHILE · 2024</span><b>★</b><small>REPÚBLICA<br>DE CHILE</small><i>100</i></span>
+          <span class="coin-face tails"><span class="year">BANCO CENTRAL</span><b>✦</b><small>CIEN PESOS</small><i>$</i></span>
+        </button>
+      </div>
       <div id="result" class="result">Toca la moneda para lanzar</div>
       <p id="hint" class="hint">o usa el botón de abajo</p>
     </section>
@@ -61,6 +71,6 @@
     </section>
     <p class="footnote">Cada lanzamiento usa aleatoriedad criptográfica de tu dispositivo.</p>
   </main>
-  <script src="app.js"></script>
+  <script src="app-v2.js"></script>
 </body>
 </html>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <radialGradient id="bg" cx="35%" cy="20%"><stop stop-color="#183e54"/><stop offset="1" stop-color="#06131f"/></radialGradient>
+    <radialGradient id="gold" cx="32%" cy="23%"><stop stop-color="#fff0a8"/><stop offset=".48" stop-color="#e1af45"/><stop offset="1" stop-color="#8a521b"/></radialGradient>
+    <filter id="s"><feDropShadow dx="0" dy="22" stdDeviation="18" flood-opacity=".55"/></filter>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <ellipse cx="256" cy="377" rx="164" ry="46" fill="#02080e" opacity=".65"/>
+  <circle cx="256" cy="233" r="151" fill="url(#gold)" stroke="#f6d779" stroke-width="10" filter="url(#s)"/>
+  <circle cx="256" cy="233" r="127" fill="none" stroke="#71431a" stroke-width="6" stroke-dasharray="4 8"/>
+  <path d="M256 123l18 57 60-1-49 35 20 57-49-35-49 35 20-57-49-35 60 1z" fill="#6f431a"/>
+  <text x="256" y="327" text-anchor="middle" font-family="Arial,sans-serif" font-size="58" font-weight="700" fill="#6f431a">100</text>
+  <path d="M149 418h214" stroke="#f3bf53" stroke-width="13" stroke-linecap="round"/>
+</svg>

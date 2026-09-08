@@ -1,0 +1,10 @@
+{
+  "name": "Moneda al Aire",
+  "short_name": "Moneda",
+  "description": "Cara o sello con monedas del mundo.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#071524",
+  "theme_color": "#071524",
+  "icons": [{"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+}
